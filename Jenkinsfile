@@ -10,7 +10,7 @@ pipeline {
 
         stage('Build') {
             steps {
-                bat 'docker build -t . aran/my-flask-app:latest '
+                bat 'docker build -t my-flask-app . '
             }
         }
 
