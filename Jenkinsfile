@@ -7,28 +7,28 @@ pipeline {
                 bat 'git clone https://github.com/aran-yogesh/EPAM-Project.git'
             }
         }
-
+        stage('Code') {
+            steps {
+                echo 'Code successfull'
+            }
+        }
+        
         stage('Build') {
             steps {
-                bat echo "build successful"
+                echo 'Build Successfull'
             }
         }
-
-        stage('Test') {
+        
+        stage('Image and push image') {
             steps {
-                bat echo "test successful"
+                echo 'Push Successfull'
             }
         }
-
-        stage('Login and Push Image') {
-            steps {
-                bat "login and push successful"
-            }
-        }
-
+        
         stage('Deploy') {
             steps {
-                bat echo "Deploy succesfull"
+                echo 'Deploy Successfull'
+            }
         }
     }
 }
